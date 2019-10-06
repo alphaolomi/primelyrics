@@ -7,7 +7,7 @@
     "moment": "2.24.0",
     "react": "16.10.2",
     "react-dom": "16.10.2",
-    "react-moment": "0.9.5",
+    "react-moment": "0.9.6",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.1.2"
   },
