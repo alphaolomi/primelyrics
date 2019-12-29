@@ -3,8 +3,8 @@
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge"></a>
-  <img src="https://img.shields.io/badge/made%20in-tanzania-purple?style=for-the-badge" alt="made in tanzania">
-  <img src="https://img.shields.io/badge/framework-react.js-green?style=for-the-badge" alt="react.js">
+  <img src="https://img.shields.io/badge/made%20in-tanzania-green?style=for-the-badge" alt="made in tanzania">
+  <img src="https://img.shields.io/badge/framework-react.js-purple?style=for-the-badge" alt="react.js">
 </p>
 
 ## Overview
