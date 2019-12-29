@@ -11,18 +11,14 @@ const Lyrics = props => {
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
-          props.match.params.id
-        }&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       .then(res => {
         let lyrics = res.data.message.body.lyrics;
         setLyrics({ lyrics });
 
         return axios.get(
-          `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${
-            props.match.params.id
-          }&apikey=${process.env.REACT_APP_MM_KEY}`
+          `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
         );
       })
       .then(res => {
@@ -47,8 +43,7 @@ const Lyrics = props => {
         </Link>
         <div className="card">
           <h5 className="card-header">
-            {track.track.track_name} by{" "}
-            <span className="text-secondary">{track.track.artist_name}</span>
+            {track.track.track_name} by <span className="text-secondary">{track.track.artist_name}</span>
           </h5>
           <div className="card-body">
             <p className="card-text">{lyrics.lyrics.lyrics_body}</p>
@@ -63,18 +58,13 @@ const Lyrics = props => {
             <strong>Song Genre</strong>:{" "}
             {track.track.primary_genres.music_genre_list.length === 0
               ? "NO GENRE AVAILABLE"
-              : track.track.primary_genres.music_genre_list[0].music_genre
-                  .music_genre_name}
+              : track.track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
           </li>
           <li className="list-group-item">
-            <strong>Explicit Words</strong>:{" "}
-            {track.track.explicit === 0 ? "No" : "Yes"}
+            <strong>Explicit Words</strong>: {track.track.explicit === 0 ? "No" : "Yes"}
           </li>
           <li className="list-group-item">
-            <strong>Release Date</strong>:{" "}
-            <Moment format="MM/DD/YYYY">
-              {track.track.first_release_date}
-            </Moment>
+            <strong>Release Date</strong>: <Moment format="MM/DD/YYYY">{track.track.first_release_date}</Moment>
           </li>
         </ul>
       </>
