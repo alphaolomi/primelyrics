@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Navbar from "./components/layout/Navbar";
@@ -7,7 +8,7 @@ import Lyrics from "./components/tracks/Lyrics";
 
 import "./App.css";
 
-import { ContextController } from "./context";
+import ContextController from "./context";
 
 const App = () => {
   return (

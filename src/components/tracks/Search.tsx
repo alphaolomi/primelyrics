@@ -3,6 +3,7 @@ import axios from "axios";
 import { Context } from "../../context";
 
 const Search = () => {
+  // const appCon = useContext(Context);
   const [state, setState] = useContext(Context);
   const [userInput, setUserInput] = useState("");
   const [trackTitle, setTrackTitle] = useState("");
