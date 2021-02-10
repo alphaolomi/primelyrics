@@ -46,7 +46,7 @@ const ContextController = ({ children }) => {
         });
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [apiUrl]);
 
   let all = [state, setState] as const;
 

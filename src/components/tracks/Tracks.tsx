@@ -4,7 +4,7 @@ import Spinner from "../layout/Spinner";
 import Track from "../tracks/Track";
 
 const Tracks = () => {
-  const [state, setState] = useContext(Context);
+  const [state, ] = useContext(Context);
   const { track_list, heading } = state;
 
   if (track_list === undefined || track_list.length === 0) {
