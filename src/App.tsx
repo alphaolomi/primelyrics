@@ -7,7 +7,7 @@ import Lyrics from "./components/tracks/Lyrics";
 
 import "./App.css";
 
-import { ContextController } from "./context";
+import ContextController from "./context";
 
 const App = () => {
   return (
