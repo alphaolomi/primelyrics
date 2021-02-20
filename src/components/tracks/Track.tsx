@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Play,Disc,ChevronRight } from 'react-feather';
+import { Play, Disc, ChevronRight } from "react-feather";
 
-const Track = ({track}) => {
-
+const Track = ({ track }) => {
   return (
     <div className="col-md-4">
       <div className="card mb-4 shadow-sm">
@@ -20,10 +19,7 @@ const Track = ({track}) => {
             </strong>
             : {track.album_name}
           </p>
-          <Link
-            to={`lyrics/track/${track.track_id}`}
-            className="btn btn-dark"
-          >
+          <Link to={`lyrics/track/${track.track_id}`} className="btn btn-dark">
             <ChevronRight /> View Lyrics
           </Link>
         </div>

@@ -16,15 +16,17 @@ let intialState: AppContextInterface = {
   heading: "",
 };
 
-
-export type StateType = [AppContextInterface, React.Dispatch<React.SetStateAction<AppContextInterface>>];
+export type StateType = [
+  AppContextInterface,
+  React.Dispatch<React.SetStateAction<AppContextInterface>>
+];
 
 export const Context = React.createContext<
   | (
       | AppContextInterface
       | React.Dispatch<React.SetStateAction<AppContextInterface>>
     )[]
-  |any
+  | any
 >(intialState);
 
 ///////////////////////////////////////
@@ -50,13 +52,10 @@ const ContextController = ({ children }) => {
       })
       .catch((err) => console.log(err));
   }, [apiUrl]);
-  
-  
-  let all:StateType = [state, setState] ;
 
-  return (
-    <Context.Provider value={all}>{children}</Context.Provider>
-  );
+  let all: StateType = [state, setState];
+
+  return <Context.Provider value={all}>{children}</Context.Provider>;
 };
 
 export default ContextController;

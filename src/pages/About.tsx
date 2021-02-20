@@ -1,7 +1,6 @@
 import React from "react";
 import { GitHub } from "react-feather";
 
-
 const About = () => {
   return (
     <div>
@@ -24,8 +23,6 @@ const About = () => {
           Project source code at GitHub <GitHub />
         </h3>
       </div>
-
-     
     </div>
   );
 };

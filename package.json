@@ -25,7 +25,7 @@
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "lint": "prettier --write",
+    "lint": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

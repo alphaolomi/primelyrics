@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { Music as MusicIcon } from 'react-feather';
+import { Music as MusicIcon } from "react-feather";
 
 import { Context } from "../../context";
 import { StateType } from "../../context";
 
-const BASE_URL = 'https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1'
-
-
+const BASE_URL =
+  "https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1";
 
 const Search = () => {
   const [state, setState] = useContext<StateType>(Context);
@@ -37,8 +36,8 @@ const Search = () => {
 
   return (
     <div className="card card-body mb-4 p-4">
-      <h1 className="display-4 text-center">        
-        <MusicIcon size={48}/> Search For A Song
+      <h1 className="display-4 text-center">
+        <MusicIcon size={48} /> Search For A Song
       </h1>
       <p className="lead text-center">Get the lyrics for any song</p>
       <form onSubmit={findTrack}>
@@ -53,10 +52,9 @@ const Search = () => {
           />
         </div>
         <div className="d-grid gap-2 mt-3">
-          
-        <button className="btn btn-light btn-lg border  mb-4" type="submit">
-          Get Track Lyrics
-        </button>
+          <button className="btn btn-light btn-lg border  mb-4" type="submit">
+            Get Track Lyrics
+          </button>
         </div>
       </form>
     </div>

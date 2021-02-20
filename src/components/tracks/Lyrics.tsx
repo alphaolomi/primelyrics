@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Spinner from "../layout/Spinner";
 import Moment from "react-moment";
 
-const BASE_URL = 'https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1'
+const BASE_URL =
+  "https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1";
 
 const Lyrics = (props) => {
   const [track, setTrack] = useState<any>({});
@@ -31,8 +32,12 @@ const Lyrics = (props) => {
       .catch((err) => console.log(err));
   }, [props.match.params.id]);
 
-  
-  if ( track === undefined || lyrics === undefined || Object.keys(track).length === 0 || Object.keys(lyrics).length === 0 ) {
+  if (
+    track === undefined ||
+    lyrics === undefined ||
+    Object.keys(track).length === 0 ||
+    Object.keys(lyrics).length === 0
+  ) {
     return <Spinner />;
   } else {
     return (
