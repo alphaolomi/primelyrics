@@ -6,7 +6,8 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <a className="navbar-brand mx-auto" href="/">
-            <h3 className="">LyricsFinder</h3>
+            {/* <img src={logo} alt="prime lyrics logo" width={30} height={24} className="d-inline-block align-top" /> */}
+            <h3 className="">PrimeLyrics</h3>
           </a>
           <button
             className="navbar-toggler"
