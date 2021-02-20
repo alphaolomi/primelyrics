@@ -16,6 +16,9 @@ let intialState: AppContextInterface = {
   heading: "",
 };
 
+
+export type StateType = [AppContextInterface, React.Dispatch<React.SetStateAction<AppContextInterface>>];
+
 export const Context = React.createContext<
   | (
       | AppContextInterface
@@ -47,8 +50,9 @@ const ContextController = ({ children }) => {
       })
       .catch((err) => console.log(err));
   }, [apiUrl]);
-
-  let all = [state, setState] as const;
+  
+  
+  let all:StateType = [state, setState] ;
 
   return (
     <Context.Provider value={all}>{children}</Context.Provider>

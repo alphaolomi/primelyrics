@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Spinner from "../layout/Spinner";
 import Moment from "react-moment";
 
+const BASE_URL = 'https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1'
 
 const Lyrics = (props) => {
   const [track, setTrack] = useState<any>({});
@@ -13,14 +14,14 @@ const Lyrics = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+        `${BASE_URL}/track.lyrics.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       .then((res) => {
         let lyrics = res.data.message.body.lyrics;
         setLyrics({ lyrics });
 
         return axios.get(
-          `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+          `${BASE_URL}/track.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
         );
       })
       .then((res) => {

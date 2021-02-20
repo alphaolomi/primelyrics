@@ -1,0 +1,23 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+// Override default variables before the import
+// Your variable overrides
+// $body-bg: #000;
+// $primary: #0074d9;
+// $danger: #ff4136;
+
+// $body-bg: #000;
+// $body-color: #111;
+
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+
+// Custom styles
+body{
+    font-family: 'Lato', sans-serif;
+}
