@@ -1,14 +1,15 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className=" mb-3">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <a className="navbar-brand mx-auto" href="/">
+        <div className="container">        
+          <Link className="navbar-brand mx-auto" href="/">
             {/* <img src={logo} alt="prime lyrics logo" width={30} height={24} className="d-inline-block align-top" /> */}
             <h3 className="">PrimeLyrics</h3>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,10 +22,10 @@ const Navbar = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <a className="nav-link" href="/about">
+            <div className="navbar-nav">              
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </div>
           </div>
         </div>
