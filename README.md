@@ -1,5 +1,5 @@
 <p align="center">
-<img src="src/assets/imgs/cover.png" alt="prime lyrics cover image" style="">
+<img src="src/assets/imgs/cover.png" alt="prime lyrics cover image" style="border-rdius:10px">
 </p>
 <br />
 <br />
@@ -14,11 +14,11 @@
 <br />
 <br />
 
-
 ## Development
 
-A Basic lyric finder app. Using React Hooks.Lyric Mono in development right now, Wanna check it out? sure!! .
-Get your API key and add to the .ENV file
+A Basic lyric finder app. Using React Hooks. Lyric Mono in development right now, Wanna check it out? sure!! .
+
+Get your API key from [MusicMatch](/) and add to the `.ENV` file
 
 ## Quick Start
 
@@ -33,7 +33,8 @@ yarn start
 yarn run build
 ```
 
-## Built with React.js and  Musixmatch API.
+## Built with React.js and Musixmatch API.
+
 ## Author
 
 Alpha Olomi [hello@alphaolomi.com](mailto:hello@alphaolomi.com)
