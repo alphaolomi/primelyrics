@@ -2,6 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Music as MusicIcon } from "react-feather";
 
+import Row from "react-bootstrap-v5/lib/Row";
+import Col from "react-bootstrap-v5/lib/Col";
+import Card from "react-bootstrap-v5/lib/Card";
+import Button from "react-bootstrap-v5/lib/Button";
+import Form from "react-bootstrap-v5/lib/Form";
+
 import { Context } from "../../context";
 import { StateType } from "../../context";
 
@@ -35,29 +41,36 @@ const Search = () => {
   };
 
   return (
-    <div className="card card-body mb-4 p-4">
-      <h1 className="display-4 text-center">
-        <MusicIcon size={48} /> Search For A Song
-      </h1>
-      <p className="lead text-center">Get the lyrics for any song</p>
-      <form onSubmit={findTrack}>
-        <div className="form-group">
-          <input
-            type="text"
-            className="form-control form-control-lg"
-            placeholder="Song title..."
-            name="userInput"
-            value={userInput}
-            onChange={onChange}
-          />
-        </div>
-        <div className="d-grid gap-2 mt-3">
-          <button className="btn btn-light btn-lg border  mb-4" type="submit">
-            Get Track Lyrics
-          </button>
-        </div>
-      </form>
-    </div>
+    <Card className="mb-4 p-4">
+      <Card.Body>
+        <Card.Title>
+          {" "}
+          <h1 className="display-4 text-center">
+            <MusicIcon size={48} /> Search For A Song
+          </h1>
+        </Card.Title>
+        <Card.Text>
+          <p className="lead text-center">Get the lyrics for any song</p>
+          <Form onSubmit={findTrack}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">              
+              <Form.Control
+                type="text"
+                name="userInput"
+                value={userInput}
+                onChange={onChange}
+                placeholder="Song title..."
+              />            
+            </Form.Group>
+
+            <div className="d-grid gap-2 mt-3">
+              <Button variant="secondary" type="submit" size="lg">
+                Get Track Lyrics
+              </Button>
+            </div>
+          </Form>
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 

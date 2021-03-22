@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Navbar from "./components/layout/Navbar";
+import Container from "react-bootstrap-v5/lib/Container";
+import AppNavbar from "./components/layout/Navbar";
 import Index from "./components/layout/Index";
 import Lyrics from "./components/tracks/Lyrics";
 import About from "./pages/About";
@@ -15,14 +16,14 @@ const App = () => {
     <ContextController>
       <Router>
         <>
-          <Navbar />
-          <div className="container">
+          <AppNavbar />
+          <Container>
             <Switch>
               <Route exact path="/" component={Index} />
               <Route exact path="/about" component={About} />
               <Route exact path="/lyrics/track/:id" component={Lyrics} />
             </Switch>
-          </div>
+          </Container>
         </>
       </Router>
     </ContextController>

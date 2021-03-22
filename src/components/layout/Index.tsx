@@ -5,7 +5,9 @@ import Search from "../tracks/Search";
 const Index = () => {
   return (
     <>
+      <div className="mt-3">
       <Search />
+      </div>
       <Tracks />
     </>
   );
