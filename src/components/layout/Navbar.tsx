@@ -14,6 +14,11 @@ const AppNavbar = () => {
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Navbar.Text>
+            <Nav.Link as={Link} to="/preferences">
+              Preference
+            </Nav.Link>
+          </Navbar.Text>
           <Navbar.Text>
             <Nav.Link as={Link} to="/about">
               About

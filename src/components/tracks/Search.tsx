@@ -20,7 +20,8 @@ const Search = () => {
   const [trackTitle, setTrackTitle] = useState("");
 
   useEffect(() => {
-    axios
+    if(trackTitle.length > 0 ){
+      axios
       .get(
         `${BASE_URL}/track.search?q_track=${trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
       )
@@ -28,7 +29,8 @@ const Search = () => {
         let track_list = res.data.message.body.track_list;
         setState({ track_list: track_list, heading: "Search Results" });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {alert(err);console.log(err)});
+    }
   }, [trackTitle, setState]);
 
   const findTrack = (e) => {

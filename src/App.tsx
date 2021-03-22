@@ -6,6 +6,7 @@ import AppNavbar from "./components/layout/Navbar";
 import Index from "./components/layout/Index";
 import Lyrics from "./components/tracks/Lyrics";
 import About from "./pages/About";
+import Preferences from "./pages/Preferences";
 
 import "./App.scss";
 
@@ -21,6 +22,7 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={Index} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/preferences" component={Preferences} />
               <Route exact path="/lyrics/track/:id" component={Lyrics} />
             </Switch>
           </Container>
