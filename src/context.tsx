@@ -40,14 +40,15 @@ const ContextController = ({ children }) => {
   const [state, setState] = useState<AppContextInterface>(intialState);
 
   let apiUrl = process.env.REACT_APP_MM_API || "";
-  apiUrl = `${apiUrl}?page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`;
+  let page_size = 9
+  apiUrl = `${apiUrl}?page=1&page_size=${page_size}&country=us&f_has_lyrics=1&apikey=${process.env.REACT_APP_MM_KEY}`;
   useEffect(() => {
     axios
       .get(apiUrl)
       .then((res) => {
         setState({
           track_list: res.data.message.body.track_list,
-          heading: "Top 10 Tracks",
+          heading: `Top ${page_size} Tracks`,
         });
       })
       .catch((err) => console.log(err));
