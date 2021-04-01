@@ -11,6 +11,7 @@ import Preferences from "./pages/Preferences";
 import "./App.scss";
 
 import ContextController from "./context";
+import Changelog from "./pages/Changelog";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
               <Route exact path="/" component={Index} />
               <Route exact path="/about" component={About} />
               <Route exact path="/preferences" component={Preferences} />
+              <Route exact path="/changelog" component={Changelog} />
               <Route exact path="/lyrics/track/:id" component={Lyrics} />
             </Switch>
           </Container>
