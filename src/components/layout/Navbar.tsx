@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import Navbar from "react-bootstrap-v5/lib/Navbar";
 import Nav from "react-bootstrap-v5/lib/Nav";
 import Container from "react-bootstrap-v5/lib/Container";
@@ -23,7 +24,7 @@ const AppNavbar = () => {
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
-          </Navbar.Text>
+          </Navbar.Text>          
         </Navbar.Collapse>
       </Container>
     </Navbar>
