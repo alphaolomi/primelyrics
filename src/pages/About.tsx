@@ -29,6 +29,11 @@ const About = () => {
               Project source code hosted at <Link to="https://github.com/alphaolomi/primelyrics"><GitHub />GitHub </Link>
             </h3>
           </Row>
+          <Row>
+            <h3>
+              <Link to="/changelog">Changelog </Link>
+            </h3>
+          </Row>
         </Col>
         <Col md={12} lg={4}>
           <span className="mt-5 p-4">
