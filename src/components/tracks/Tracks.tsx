@@ -7,7 +7,8 @@ const Tracks = () => {
   const [{ track_list, heading }] = useContext(Context);
 
   if (track_list === undefined || track_list.length === 0) {
-    return <Spinner />;
+    // we don't need a Tracks component
+    return null
   } else {
     return (
       <>
