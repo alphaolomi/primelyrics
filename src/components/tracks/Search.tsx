@@ -35,15 +35,17 @@ const Search = () => {
       })
       .catch((err) => {alert(err);console.log(err)});
     }
-  }, [trackTitle, setState]);
+  }, [trackTitle,setState]);
 
   const findTrack = (e) => {
     e.preventDefault();
-    setTrackTitle(userInput);
+    setTrackTitle(userInput.trim());
+    setLoadNow(true)
   };
 
   const onChange = (e) => {
     setUserInput(e.target.value);
+
   };
 
   return (<>
@@ -64,12 +66,13 @@ const Search = () => {
                 name="userInput"
                 value={userInput}
                 onChange={onChange}
+                autoComplete="off"
                 placeholder="Song title..."
               />
             </Form.Group>
 
             <div className="d-grid gap-2 mt-3">
-              <Button variant="secondary" type="submit" size="lg" onClick={()=>setLoadNow(true)}>
+              <Button variant="secondary" type="submit" size="lg">
                 Get Track Lyrics
               </Button>
             </div>
@@ -77,7 +80,7 @@ const Search = () => {
         </Card.Text>
       </Card.Body>
     </Card>
-    {loadNow && <Spinner />}
+    {trackTitle && loadNow && <Spinner />}
     </>
   );
 };
