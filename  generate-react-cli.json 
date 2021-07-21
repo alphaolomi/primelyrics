@@ -1,0 +1,29 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": false,
+  "cssPreprocessor": "scss",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/components",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": true
+    },
+    "page": {
+      "path": "pages",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": true
+    },
+    "layout": {
+      "path": "src/layouts",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": true
+    }
+  }
+}
