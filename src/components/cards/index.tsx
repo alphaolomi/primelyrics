@@ -1,6 +1,6 @@
 import React from "react";
 
-import data from "@public/meta.json";
+import data from "@/public/meta.json";
 
 export const Cards: React.FC = () => {
     return (
