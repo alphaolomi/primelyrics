@@ -1,4 +1,4 @@
-import { fireEvent, render } from "@test";
+import { fireEvent, render } from "@/tests";
 import { TestingLibraryExample } from "./index";
 
 /**

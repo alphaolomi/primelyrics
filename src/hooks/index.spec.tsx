@@ -1,6 +1,6 @@
 import { renderHook, act } from "@testing-library/react-hooks";
 
-import { AllTheProviders } from "@test";
+import { AllTheProviders } from "@/tests";
 
 import { useCounter } from "./useCounter";
 

@@ -8,16 +8,22 @@ import { useQuery } from "react-query";
  * please visit https://react-query.tanstack.com/
  */
 
+ export interface Joke {
+    id: number;
+    type: string;
+    setup: string;
+    punchline: string;
+}
+
+
 const API_URL =
     "https://official-joke-api.appspot.com/jokes/programming/random";
 
 export const ReactQueryExample = () => {
-    const { data, refetch } = useQuery(
+    const { data, refetch } = useQuery<Array<Joke>>(
         "repoData",
         () => fetch(API_URL).then((res) => res.json()),
-        {
-            refetchOnWindowFocus: false,
-        },
+        { refetchOnWindowFocus: false },
     );
 
     const handleClick = () => {
