@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 /**
  * This component is generated as an example for axios
@@ -7,6 +7,14 @@ import axios from "axios";
  * To learn more about axios and data fetching,
  * please visit https://github.com/axios/axios
  */
+
+ export interface Joke {
+    id: number;
+    type: string;
+    setup: string;
+    punchline: string;
+}
+
 
 const BASE_API_URL = "https://official-joke-api.appspot.com/";
 
@@ -17,9 +25,9 @@ const jokesApi = axios.create({
 });
 
 export const AxiosExample = () => {
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<AxiosError|null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<Array<Joke>>([]);
 
     // Note: the empty deps array [] means
     // this useEffect will run once
@@ -30,18 +38,11 @@ export const AxiosExample = () => {
             url: API_URL,
         })
             .then((res) => res.data)
-            .then(
-                (result) => {
-                    setData(result);
-                    setIsLoaded(true);
-                },
+            .then((result) => {setData(result);setIsLoaded(true);},
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
                 // exceptions from actual bugs in components.
-                (error) => {
-                    setIsLoaded(true);
-                    setError(error);
-                },
+                (error:AxiosError) => { setIsLoaded(true);setError(error); },
             );
     }, []);
 

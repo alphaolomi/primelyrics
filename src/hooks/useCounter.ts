@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
 
-import { counter } from "@recoil/atoms";
+import { counter } from "@/recoil/atoms";
 
 export const useCounter: () => [
     number,

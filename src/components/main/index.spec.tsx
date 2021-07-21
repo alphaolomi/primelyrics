@@ -1,4 +1,4 @@
-import { render } from "@test";
+import { render } from "@/tests";
 
 import { Main } from "./index";
 

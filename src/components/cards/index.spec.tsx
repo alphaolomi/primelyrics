@@ -1,4 +1,4 @@
-import { render } from "@test";
+import { render } from "@/tests";
 
 import data from "@public/meta.json";
 import { Cards } from "./index";

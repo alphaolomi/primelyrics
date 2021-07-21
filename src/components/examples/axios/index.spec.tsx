@@ -2,7 +2,7 @@ import { AxiosExample } from "./index";
 import "./mocks";
 import { mockResponse } from "./mocks";
 
-import { render, waitFor } from "@test";
+import { render, waitFor } from "@/tests";
 
 describe("Axios testing with testing-library and nock", () => {
     it("renders the mock result", async () => {
