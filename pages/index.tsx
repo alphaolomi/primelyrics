@@ -1,16 +1,16 @@
 import React from "react";
+import Tracks from "../tracks/Tracks";
+import Search from "../tracks/Search";
 
-import { Container, Header, Main, Footer, Cards } from "@/components";
-
-const Home: React.FC = () => {
-    return (
-        <Container>
-            <Header />
-            <Main />
-            <Cards />
-            <Footer />
-        </Container>
-    );
+const Index = () => {
+  return (
+    <>
+      <div className="mt-3">
+      <Search />
+      </div>
+      <Tracks />
+    </>
+  );
 };
 
-export default Home;
+export default Index;
