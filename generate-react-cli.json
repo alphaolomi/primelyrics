@@ -6,10 +6,24 @@
   "component": {
     "default": {
       "path": "src/components",
-      "withStyle": false,
-      "withTest": true,
+      "withLazy": false,
       "withStory": false,
-      "withLazy": false
+      "withStyle": false,
+      "withTest": true
+    },
+    "page": {
+      "path": "pages",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": true
+    },
+    "layout": {
+      "path": "src/layouts",
+      "withLazy": false,
+      "withStory": false,
+      "withStyle": false,
+      "withTest": true
     }
   }
 }
