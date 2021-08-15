@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import Link from 'next/link'
 import { GitHub } from "react-feather";
 import Row from "react-bootstrap-v5/lib/Row";
 import Col from "react-bootstrap-v5/lib/Col";
-import logo from "../assets/imgs/profile.png";
+// import logo from "@/assets/imgs/profile.png";
 const About = () => {
   return (
     <div className="mt-5">
@@ -26,23 +26,23 @@ const About = () => {
           <br />
           <Row>
             <h3>
-              Project source code hosted at <Link to="https://github.com/alphaolomi/primelyrics"><GitHub />GitHub </Link>
+              Project source code hosted at <Link href="https://github.com/alphaolomi/primelyrics"><GitHub />GitHub </Link>
             </h3>
           </Row>
           <Row>
             <h3>
-              <Link to="/changelog">Changelog </Link>
+              <Link href="/changelog">Changelog </Link>
             </h3>
           </Row>
         </Col>
         <Col md={12} lg={4}>
           <span className="mt-5 p-4">
-            <img
+            {/* <img
               src={logo}
               width={300}
               style={{ borderRadius: 10 + "px" }}
               alt=""
-            />
+            /> */}
           </span>
         </Col>
       </Row>
