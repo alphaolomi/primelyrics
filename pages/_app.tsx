@@ -1,8 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
 // 
-
-import "tailwindcss/tailwind.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "@styles/global.css";
 
 // 

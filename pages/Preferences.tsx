@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { GitHub } from "react-feather";
 import Row from "react-bootstrap-v5/lib/Row";
 import Col from "react-bootstrap-v5/lib/Col";
 import Nav from "react-bootstrap-v5/lib/Nav";
 import Tab from "react-bootstrap-v5/lib/Tab";
-import AlertDialog from "../components/AlertDialog";
+import AlertDialog from "@/components/AlertDialog/AlertDialog";
 
 import Form from "react-bootstrap-v5/lib/Form";
 import Button from "react-bootstrap-v5/lib/Button";
