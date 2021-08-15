@@ -2,4 +2,6 @@ export interface Track {
     id: string;
 }
 
-// export interface TracksList{Array<Track>}
+export interface TracksList{
+    tracks: Track[];
+}
