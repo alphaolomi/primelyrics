@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^27.0.0",
     "@types/node": "^16.0.0",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
@@ -18,7 +18,7 @@
     "react-bootstrap-v5": "^1.4.0",
     "react-dom": "17.0.2",
     "react-feather": "^2.0.9",
-    "react-markdown": "^6.0.2",
+    "react-markdown": "^7.0.0",
     "react-moment": "1.1.1",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
