@@ -20,7 +20,7 @@
     "react-feather": "^2.0.9",
     "react-markdown": "^7.0.0",
     "react-moment": "1.1.1",
-    "react-router-dom": "5.2.0",
+    "react-router-dom": "5.2.1",
     "react-scripts": "4.0.3",
     "remark-gfm": "^2.0.0",
     "source-map-explorer": "^2.5.2",
