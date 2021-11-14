@@ -1,6 +1,6 @@
 /**
- * Convert newline breaks with 
- * 
+ * Convert newline breaks with
+ *
  * @param text String with using newlines
  * @returns {string} String with <br> instead of newline breaks
  */
