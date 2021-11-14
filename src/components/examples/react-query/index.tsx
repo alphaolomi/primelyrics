@@ -8,13 +8,12 @@ import { useQuery } from "react-query";
  * please visit https://react-query.tanstack.com/
  */
 
- export interface Joke {
+export interface Joke {
     id: number;
     type: string;
     setup: string;
     punchline: string;
 }
-
 
 const API_URL =
     "https://official-joke-api.appspot.com/jokes/programming/random";

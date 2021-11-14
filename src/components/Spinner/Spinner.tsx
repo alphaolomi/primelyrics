@@ -1,10 +1,7 @@
-import React from 'react';
+import React from "react";
 
-
-const Spinner:React.FC = () => (
-  <div data-testid="Spinner">
-    Spinner Component
-  </div>
+const Spinner: React.FC = () => (
+    <div data-testid="Spinner">Spinner Component</div>
 );
 
 export default Spinner;
