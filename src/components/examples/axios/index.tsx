@@ -8,13 +8,12 @@ import axios, { AxiosError } from "axios";
  * please visit https://github.com/axios/axios
  */
 
- export interface Joke {
+export interface Joke {
     id: number;
     type: string;
     setup: string;
     punchline: string;
 }
-
 
 const BASE_API_URL = "https://official-joke-api.appspot.com/";
 
@@ -25,7 +24,7 @@ const jokesApi = axios.create({
 });
 
 export const AxiosExample = () => {
-    const [error, setError] = useState<AxiosError|null>(null);
+    const [error, setError] = useState<AxiosError | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [data, setData] = useState<Array<Joke>>([]);
 
@@ -38,11 +37,18 @@ export const AxiosExample = () => {
             url: API_URL,
         })
             .then((res) => res.data)
-            .then((result) => {setData(result);setIsLoaded(true);},
+            .then(
+                (result) => {
+                    setData(result);
+                    setIsLoaded(true);
+                },
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
                 // exceptions from actual bugs in components.
-                (error:AxiosError) => { setIsLoaded(true);setError(error); },
+                (error: AxiosError) => {
+                    setIsLoaded(true);
+                    setError(error);
+                },
             );
     }, []);
 

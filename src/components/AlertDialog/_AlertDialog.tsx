@@ -1,10 +1,7 @@
-import React from 'react';
-
+import React from "react";
 
 const AlertDialog = () => (
-  <div data-testid="AlertDialog">
-    AlertDialog Component
-  </div>
+    <div data-testid="AlertDialog">AlertDialog Component</div>
 );
 
 export default AlertDialog;
