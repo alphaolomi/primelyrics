@@ -1,26 +1,26 @@
-import React, { useContext } from "react";
-import { Context } from "../../context";
-import Spinner from "../layout/Spinner";
-import Track from "../tracks/Track";
+import React from "react";
+// import Spinner from "@/components/Spinner/Spinner";
+import Track from "@/components/Tracks/Track";
+import { NextPage } from "next";
+import { useTracks } from "@/hooks";
 
-const Tracks = () => {
-    const [{ track_list, heading }] = useContext(Context);
+const Tracks: NextPage = () => {
+    const [trackList] = useTracks();
 
-    if (track_list === undefined || track_list.length === 0) {
-        // we don't need a Tracks component
+    if (trackList === undefined || trackList.length === 0) {
         return null;
-    } else {
-        return (
-            <>
-                <h3 className="text-center mb-4">{heading}</h3>
-                <div className="row">
-                    {track_list.map((item) => (
-                        <Track key={item.track.track_id} track={item.track} />
-                    ))}
-                </div>
-            </>
-        );
     }
+
+    return (
+        <>
+            <h3 className="text-center mb-4">Top 10 songs</h3>
+            <div className="row">
+                {trackList.map((item) => (
+                    <Track key={item.track.track_id} track={item.track} />
+                ))}
+            </div>
+        </>
+    );
 };
 
 export default Tracks;

@@ -3,8 +3,9 @@ import Link from "next/link";
 import { GitHub } from "react-feather";
 import Row from "react-bootstrap-v5/lib/Row";
 import Col from "react-bootstrap-v5/lib/Col";
-// import logo from "@/assets/imgs/profile.png";
-const About = () => {
+import { NextPage } from "next";
+
+const About: NextPage = () => {
     return (
         <div className="mt-5">
             <Row>
