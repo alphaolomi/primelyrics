@@ -14,13 +14,12 @@ export const counter = atom({
     default: 0,
 });
 
-
 export const searchText = atom({
     key: Atoms.SearchText,
     default: "",
 });
 
-export const DefaultItemPerPage = 10
+export const DefaultItemPerPage = 10;
 export const itemPerPage = atom({
     key: Atoms.ItemPerPage,
     default: DefaultItemPerPage,
@@ -31,10 +30,7 @@ export const heading = atom({
     default: 0,
 });
 
-
 export const tracksList = atom<Array<Track>>({
     key: Atoms.TracksList,
     default: [],
 });
-
-
