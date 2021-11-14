@@ -1,14 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Play, Disc, ChevronRight } from "react-feather";
 
-import Row from "react-bootstrap-v5/lib/Row";
+// import Row from "react-bootstrap-v5/lib/Row";
 import Col from "react-bootstrap-v5/lib/Col";
 import Card from "react-bootstrap-v5/lib/Card";
-import Button from "react-bootstrap-v5/lib/Button";
-import Form from "react-bootstrap-v5/lib/Form";
+import { TrackItem } from "@/interfaces";
+// import Button from "react-bootstrap-v5/lib/Button";
+// import Form from "react-bootstrap-v5/lib/Form";
 
-const Track = ({ track }) => {
+interface TrackProps {
+    track: TrackItem;
+}
+
+const Track: React.FC<TrackProps> = ({ track }) => {
     return (
         <Col md={4}>
             <Card className="mb-4 shadow-sm">
@@ -25,11 +30,10 @@ const Track = ({ track }) => {
                         </strong>
                         : {track.album_name}
                     </p>
-                    <Link
-                        to={`lyrics/track/${track.track_id}`}
-                        className="btn btn-dark text-center"
-                    >
-                        <ChevronRight /> View Lyrics
+                    <Link href={`lyrics/track/${track.track_id}`}>
+                        <a className="btn btn-dark text-center">
+                            <ChevronRight /> View Lyrics
+                        </a>
                     </Link>
                 </Card.Body>
             </Card>

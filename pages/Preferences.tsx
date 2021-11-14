@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import { GitHub } from "react-feather";
+// import Link from "next/link";
+// import { GitHub } from "react-feather";
 import Row from "react-bootstrap-v5/lib/Row";
 import Col from "react-bootstrap-v5/lib/Col";
 import Nav from "react-bootstrap-v5/lib/Nav";
@@ -10,7 +10,7 @@ import AlertDialog from "@/components/AlertDialog/AlertDialog";
 import Form from "react-bootstrap-v5/lib/Form";
 import Button from "react-bootstrap-v5/lib/Button";
 
-const Sonnet = () => {
+const Sonnet: React.FC = () => {
     return (
         <p>
             Were't aught to me I bore the canopy, With my extern the outward
@@ -22,7 +22,7 @@ const Sonnet = () => {
     );
 };
 
-const PrefForm2 = () => {
+const PrefForm2: React.FC = () => {
     return (
         <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -44,7 +44,7 @@ const PrefForm2 = () => {
     );
 };
 
-const Preferences = () => {
+const Preferences: React.FC = () => {
     return (
         <div className="mt-5">
             <AlertDialog variant="warning" message="🚧 Under Construction" />
