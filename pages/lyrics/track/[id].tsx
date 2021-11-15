@@ -1,23 +1,22 @@
-// @ts-ignore
+import { NextPage } from "next";
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Spinner from "../layout/Spinner";
+import Link from "next/link";
+
 import Moment from "react-moment";
 
 import Row from "react-bootstrap-v5/lib/Row";
 import Col from "react-bootstrap-v5/lib/Col";
 import Card from "react-bootstrap-v5/lib/Card";
 import ListGroup from "react-bootstrap-v5/lib/ListGroup";
+import { nl2br } from "@/utils/nl2br";
+import { LyricItem, Track } from "@/interfaces";
 
-const BASE_URL =
-    "https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1";
+// const BASE_URL =
+//     "https://addcors.herokuapp.com/http://api.musixmatch.com/ws/1.1";
 
-function nl2br(text) {
-    return text.replace(/(?:\r\n|\r|\n)/g, "<br />");
-}
-
-function LyricsText({ text }) {
+const LyricsText = ({ text }: { text: string }) => {
     return (
         <span
             dangerouslySetInnerHTML={{
@@ -25,51 +24,20 @@ function LyricsText({ text }) {
             }}
         ></span>
     );
-}
+};
 
-const Lyrics = (props) => {
-    const [track, setTrack] = useState<any>({});
-    const [lyrics, setLyrics] = useState<any>({});
-
-    useEffect(() => {
-        axios
-            .get(
-                `${BASE_URL}/track.lyrics.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`,
-            )
-            .then((res) => {
-                let lyrics = res.data.message.body.lyrics;
-                setLyrics({ lyrics });
-
-                return axios.get(
-                    `${BASE_URL}/track.get?track_id=${props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`,
-                );
-            })
-            .then((res) => {
-                let track = res.data.message.body.track;
-                setTrack({ track });
-            })
-            .catch((err) => console.log(err));
-    }, [props.match.params.id]);
-
-    if (
-        track === undefined ||
-        lyrics === undefined ||
-        Object.keys(track).length === 0 ||
-        Object.keys(lyrics).length === 0
-    ) {
-        return <Spinner />;
-    } else {
+const TrackLyrics: NextPage<{ track: Track; lyrics: { lyrics: LyricItem } }> =
+    ({ track, lyrics }) => {
         return (
             <main className="mt-3">
-                <Link to="/" className="btn btn-dark btn-sm mb-4">
-                    Go Back
+                <Link href="/">
+                    <a className="btn btn-dark btn-sm mb-4">Go Back</a>
                 </Link>
 
                 <Row>
                     <Col md={3}>
                         <ListGroup>
                             <ListGroup.Item>
-                                {" "}
                                 <strong>Album ID</strong>:{" "}
                                 {track.track.album_id}
                             </ListGroup.Item>
@@ -119,7 +87,6 @@ const Lyrics = (props) => {
                 </Row>
             </main>
         );
-    }
-};
+    };
 
-export default Lyrics;
+export default TrackLyrics;
