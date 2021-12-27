@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/jest": "^27.0.0",
-    "@types/node": "^16.0.0",
+    "@types/node": "^17.0.0",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "axios": "0.24.0",
@@ -12,7 +12,7 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.0.0",
     "moment": "2.29.1",
-    "node-sass": "7.0.0",
+    "node-sass": "7.0.1",
     "prettier": "^2.3.2",
     "react": "17.0.2",
     "react-bootstrap-v5": "^1.4.0",
@@ -20,8 +20,8 @@
     "react-feather": "^2.0.9",
     "react-markdown": "^7.0.0",
     "react-moment": "1.1.1",
-    "react-router-dom": "6.0.2",
-    "react-scripts": "4.0.3",
+    "react-router-dom": "6.2.1",
+    "react-scripts": "5.0.0",
     "remark-gfm": "^3.0.0",
     "source-map-explorer": "^2.5.2",
     "typescript": "^4.3.4"
