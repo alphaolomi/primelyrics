@@ -19,7 +19,7 @@
         "lodash.remove": "^4.7.0",
         "next": "^11.0.1",
         "next-compose-plugins": "^2.2.1",
-        "node-sass": "6.0.1",
+        "node-sass": "7.0.0",
         "prettier": "^2.2.1",
         "react": "^17.0.2",
         "react-bootstrap": "^1.4.3",
