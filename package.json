@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@next/bundle-analyzer": "^12.0.0",
-        "axios": "^0.21.1",
+        "axios": "^0.21.2",
         "bootstrap": "^5.0.2",
         "date-fns": "^2.22.1",
         "lodash.remove": "^4.7.0",
