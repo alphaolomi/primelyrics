@@ -1,26 +1,8 @@
-import React from "react";
-import { AppProps } from "next/app";
-//
-import "bootstrap/dist/css/bootstrap.min.css";
-import "@/styles/global.css";
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
 
-//
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Hydrate } from "react-query/hydration";
-import { RecoilRoot } from "recoil";
-
-//
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-    const queryClient = new QueryClient();
-    return (
-        <QueryClientProvider client={queryClient}>
-            <Hydrate state={pageProps.dehydratedState}>
-                <RecoilRoot>
-                    <Component {...pageProps} />
-                </RecoilRoot>
-            </Hydrate>
-        </QueryClientProvider>
-    );
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default MyApp
